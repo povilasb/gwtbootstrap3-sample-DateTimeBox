@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module rename-to="Main">
+
+	<!-- Inherit the core Web Toolkit stuff.                        -->
+	<inherits name="com.google.gwt.user.User" />
+
+	<!-- Specify the app entry point class.                         -->
+	<entry-point class="com.example.skeleton.client.Main" />
+
+	<inherits name="org.gwtbootstrap3.GwtBootstrap3" />
+	<inherits name="org.gwtbootstrap3.extras.datetimepicker.DateTimePicker"/>
+
+	<!--
+	Options for super dev mode.
+	NOTE: without these, super dev mode does not find any gwt modules.
+	-->
+	<add-linker name="xsiframe"/>
+	<set-configuration-property name="devModeRedirectEnabled" value="true"/>
+
+	<!-- Adds logging functionality                                 -->
+	<inherits name="com.google.gwt.logging.Logging"/>
+	<set-property name="gwt.logging.enabled" value="TRUE"/>
+	<set-property name="gwt.logging.logLevel" value="FINEST"/>
+	<set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
+	<set-property name="gwt.logging.developmentModeHandler" value="DISABLED" />
+	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
+	<set-property name="gwt.logging.systemHandler" value="DISABLED" />
+	<set-property name="gwt.logging.firebugHandler" value="DISABLED" />
+	<set-property name="gwt.logging.simpleRemoteHandler" value="DISABLED" />
+
+</module>
