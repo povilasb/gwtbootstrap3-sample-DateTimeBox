@@ -7,6 +7,9 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.ClickEvent;
+
 import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ChangeEvent;
 
@@ -17,12 +20,14 @@ import org.gwtbootstrap3.extras.datetimepicker.client.ui.base.constants.DateTime
 
 import org.gwtbootstrap3.client.ui.Well;
 import org.gwtbootstrap3.client.ui.ListBox;
+import org.gwtbootstrap3.client.ui.Button;
 
 
 public class DatePanel extends Composite {
 
 	@UiField DateTimeBox dateBox;
 	@UiField ListBox dateGranularity;
+	@UiField Button btnGetDate;
 
 
 	public DatePanel() {
@@ -43,6 +48,14 @@ public class DatePanel extends Composite {
 					+ granularityType.toString());
 
 				self.setDateTimePickerView(granularityType);
+			}
+		});
+
+		this.btnGetDate.addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				DatePanel.this.logger.finest("DateTimeBox value: "
+					+ DatePanel.this.dateBox.getValue().toString());
 			}
 		});
 	}

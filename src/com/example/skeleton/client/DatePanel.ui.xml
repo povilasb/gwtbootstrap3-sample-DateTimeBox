@@ -18,6 +18,8 @@
 		<bt:DateTimeBox ui:field="dateBox" autoClose="true"
 			minView="DECADE" startView="DECADE"
 			format="yyyy" />
+
+		<b:Button ui:field="btnGetDate">Get date value</b:Button>
 	</b:Well>
 
 </ui:UiBinder>
