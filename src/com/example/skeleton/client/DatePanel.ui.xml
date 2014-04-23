@@ -16,7 +16,8 @@
 		</b:ListBox>
 
 		<bt:DateTimeBox ui:field="dateBox" autoClose="true"
-			format="yyyy-mm-dd hh:ii:ss" />
+			minView="DECADE" startView="DECADE"
+			format="yyyy" />
 	</b:Well>
 
 </ui:UiBinder>
